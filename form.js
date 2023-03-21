@@ -39,6 +39,7 @@ function modifier(){
     })
 }
 
+
 function supprimer(){
     //Supprimer le user avec le id choisi à l'aide de la commande ajax fetch et la methode delete du serveur.
     //Référence : https://github.com/mockapi-io/docs/wiki/Code-examples
@@ -50,4 +51,5 @@ function supprimer(){
 }
 */
 
+// utilise la fonction afficher();
 afficher();
