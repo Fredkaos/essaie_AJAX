@@ -9,7 +9,7 @@
     <script src="form.js" defer></script>
 </head>
 <body>
-    <form>
+    <form action="reception.html" method="post">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" class="form-control" id="username" name="username" >
@@ -19,10 +19,6 @@
             <input type="email" class="form-control" id="email" name="email">
         </div>
         <input type="submit" class="btn btn-primary" value="Ajouter">
-        <input type="number" id="id" name="id">
-        <input type="button" class="btn btn-primary" value="Modifier" onclick="modifier()">
-        <input type="button" class="btn btn-primary" value="Supprimer" onclick="supprimer()">
     </form>
-    <div class="row" id="reception"></div>
 </body>
 </html>
