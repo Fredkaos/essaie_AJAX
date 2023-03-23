@@ -1,8 +1,9 @@
 function afficher() {
 // GET JSON : Obtenir les données du serveur JSON
     $.getJSON('https://641b49fa9b82ded29d4f0c5b.mockapi.io/users')
-        .done(function (users) {
-            for (user of users) {
+        // .done() est exécuté quand on a reçu la réponse du serveur
+        .done(function (users) { // users va contenir la liste d'objets json
+            for (user of users) { // user représente chaque objet
                 $("#reception").append(`
                 <div id='user${user.id}' class="card col-3" style="width: 18rem;">
                     <img class="card-img-top" src="http://placeimg.com/640/480/technics" alt="Card image cap">
@@ -15,7 +16,7 @@ function afficher() {
                 `)
             }
         });
-};
+}
 
 function modifier(){
     //Modifier l'utilisateur avec le id choisi.
@@ -39,8 +40,8 @@ function modifier(){
                     </div>
                 </div>
                 `);
-    });
-};
+    })
+}
 
 function supprimer(){
     //Supprimer le user avec le id choisi à l'aide de la commande ajax fetch et la methode delete du serveur.
@@ -50,7 +51,6 @@ function supprimer(){
     }).then(function (){
         $("#user"+$("#id").val()).remove();
     });
-};
+}
 
-// utilise la fonction afficher();
 afficher();
